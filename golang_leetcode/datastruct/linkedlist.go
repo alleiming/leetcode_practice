@@ -21,13 +21,16 @@ func (list *LinkedList) Print() {
 	node := list.Head
 	for {
 		if node != nil {
-			fmt.Println(node.Val)
+			fmt.Print(node.Val)
 		}
 		if node.Next == nil {
 			break
 		}
+		fmt.Print("->")
 		node = node.Next
 	}
+
+	fmt.Print("\r\n")
 }
 
 //添加元素到链表尾部
