@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 import (
 	"golang_leetcode/datastruct"
@@ -34,15 +34,4 @@ func reverseListByIteration(head *datastruct.ListNode) *datastruct.ListNode {
 	}
 
 	return pre
-}
-
-func main() {
-	linkedList := datastruct.NewLinkedList()
-	for i := 1; i < 100; i++ {
-		linkedList.AddLast(&datastruct.ListNode{i, nil})
-	}
-	head := reverseListByIteration(linkedList.Head)
-	//head := reverseList(linkedList.Head)
-	linkedList.Head = head
-	linkedList.Print()
 }
