@@ -1,20 +1,8 @@
 package linkedlist
 
 import (
-	"fmt"
 	"golang_leetcode/datastruct"
 )
-
-func main() {
-	linkedList := datastruct.NewLinkedList()
-	for i := 1; i < 6; i++ {
-		linkedList.AddLast(&datastruct.ListNode{i, nil})
-	}
-	linkedList.Print()
-	//middleNode := middleNode(linkedList.Head)
-	middleNode := middleNodeByFastSlowPointer(linkedList.Head)
-	fmt.Println(middleNode.Val)
-}
 
 func middleNode(head *datastruct.ListNode) *datastruct.ListNode {
 	if head == nil {
